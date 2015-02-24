@@ -1,0 +1,47 @@
+{
+    "categories": [
+        {
+            "name": "Zingers",
+            "days": [
+                {
+                    "name": "Feb. 26",
+                    "quotes": [
+                        {
+                            "speaker": "Capt. Jean-Luc Picard",
+                            "text": "&ldquo;There is a way out of every box, a solution to every puzzle; it's just a matter of finding it.&rdquo;",
+							"teaseText": "Captain Picard loves boxes and puzzles. Here's how much.",
+                            "img": "img/picard.jpg",
+                            "audio": ""
+                        },
+						{
+                            "speaker": "Lt. Cmdr. Data",
+                            "text": "&ldquo;Open sesame! You could say I have a magnetic personality. Humor! I love it.&rdquo;",
+							"teaseText": "You wouldn't think Data is funny. But he is.",
+                            "img": "img/data.jpg",
+                            "audio": ""
+                        }
+                    ]
+                },
+				{
+                    "name": "Feb. 27",
+                    "quotes": [
+                        {
+                            "speaker": "Capt. Jean-Luc Picard",
+                            "text": "&ldquo;There is a way out of every box, a solution to every puzzle; it's just a matter of finding it.&rdquo;",
+							"teaseText": "Captain Picard loves boxes and puzzles. Here's how much.",
+                            "img": "img/picard.jpg",
+                            "audio": ""
+                        },
+						{
+                            "speaker": "Lt. Cmdr. Data",
+                            "text": "&ldquo;Open sesame! You could say I have a magnetic personality. Humor! I love it.&rdquo;",
+							"teaseText": "You wouldn't think Data is funny. But he is.",
+                            "img": "img/data.jpg",
+                            "audio": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

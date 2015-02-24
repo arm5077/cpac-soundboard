@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900,300,100,500);
+
+html, body {
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+.portrait {
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	border: 10px solid #ccc;
+	display: inline-block;
+}
+
+ul {
+	list-style: none;
+	padding:0;
+}
+
+.categoryName {
+	display: inline-block;
+	width: 10%;
+	vertical-align: top;
+	text-align: right;
+	font-weight: 600;
+	margin-right: 0px;
+	font-size: 22pt;
+}
+
+ul.dayContainer {
+	display:inline-block;
+	border-left: 7px solid #76B6E3;
+	margin-left: 30px;
+	padding-left:0px;
+	width:80%;
+}
+
+.quote {
+	border-top: 1px solid #ccc;
+	padding:20px 0px 20px 20px;
+	position:relative;
+}
+
+	.quote:hover {
+		background-color:#eee
+	}
+
+		.quote:hover:before{
+			content: " ";
+			position:absolute;
+			top: 0;
+			left: -7px;
+			width:7px;
+			background-color:rgba(0,0,0,.2);
+			height:100%;
+		}
+
+	.quote:last-child {
+		border-bottom: 1px solid #ccc;
+	}
+
+.fa-volume-up {
+	font-size: 35px;
+	margin-right: 10px;
+	position: relative;
+	top: 11px;
+	color: black;
+	opacity: 0.2;
+}
+
+.portrait {
+	vertical-align:middle;	
+	margin-right:15px;
+}
+
+.text, .teaser {
+	vertical-align:middle;
+	font-size: 24px;
+}
