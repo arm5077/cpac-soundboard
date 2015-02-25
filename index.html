@@ -6,6 +6,9 @@
 	<!-- Angular.js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
 	
+	<!-- jQuery (sorry Angular bros) --> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
 	<!-- Moment.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 
@@ -26,21 +29,23 @@
 			<ul class="dayContainer" style="border-left-color: {{data.colors[$index]}}">
 				<li ng-repeat="day in category.days">
 					<ul class="quoteContainer">
-						<li class="quote" ng-repeat="quote in day.quotes">
+						<li class="quote" ng-repeat="quote in day.quotes" ng-click="playAudio($index + '_' + $parent.$index + '_' + $parent.$parent.$index, quote)">
+							<audio id = "{{ $index + '_' + $parent.$index + '_' + $parent.$parent.$index }}" src = "{{quote.audio}}"></audio>
 							<table>
 								<tr>
 									<td class="portraitContainer">
-										<i class="fa fa-volume-up"></i>
+										<i class="fa fa-volume-up" ng-class="{active: quote.playing == true}"></i>
 										<div class="portrait" style="background-image: url({{quote.img}})"></div>
 									</td>
 									<td>
 										<div class="speaker">
 											<span>{{quote.speaker}}</span>
-											<span>{{formatTime(quote.timestamp)}}</span>
-											<span class = "new" ng-show="isNew(quote.timestamp)">new</span>
+											<span class = "time">{{formatTime(quote.timestamp)}}</span>
+											<span class = "new" ng-show="isNew(quote.timestamp)" style="background-color: {{data.colors[$parent.$parent.$index]}}">new</span>
 										</div>
-										<span class="text" ng-bind-html="renderHTML(quote.text)" ng-show="false"></span>
-										<span class="teaser" ng-bind-html="renderHTML(quote.teaseText)"></span>			
+										<div class="teaser" ng-bind-html="renderHTML(quote.teaseText)" ng-show="!quote.activated"></div>	
+										<div class="text" ng-bind-html="renderHTML(quote.text)" ng-show="quote.activated"></div>
+												
 									</td>
 								<tr>
 							</table>

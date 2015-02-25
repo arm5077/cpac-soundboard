@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900,300,100,500);
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,400);
 
 html, body {
 	font-family: Roboto, Helvetica, sans-serif;
@@ -68,7 +68,7 @@ ul.dayContainer {
 	opacity: 0.2;
 }
 
-	.quote:hover .fa-volume-up {
+	.quote:hover .fa-volume-up, .fa-volume-up.active {
 		opacity: .8;
 	}
 
@@ -94,10 +94,59 @@ ul.dayContainer {
 	font-weight:400;
 	font-size:12pt;
 	display: block;
-	margin-bottom:2px;
+	margin-bottom:7px;
 }
+
+.new, .time {
+
+	padding: 3px 6px;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+
+.time {
+	border: 1px solid #aaa;
+	opacity:.3;
+}
+	
+	.quote:hover .time {
+		opacity: 1;
+	}
+
+.new {
+	color: white;
+	opacity: .7;
+}
+
+	.quote:hover .new {
+		opacity: 1;
+	}
 
 .text, .teaser {
 	vertical-align:middle;
 	font-size: 24px;
+}
+
+.text {
+	font-style: italic;
+	font-weight:300;
+	font-size:15pt;
+	
+}
+
+@media screen and (max-width: 800px) {
+	
+	.categoryName {
+		display: block;
+		width: 100%;
+		text-align: center;
+		top: 0;
+		margin-bottom: 15px;
+	}
+	
+	ul.dayContainer {
+		width: 98%;
+		margin-left: 2%;
+	}
+	
 }
