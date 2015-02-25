@@ -1,0 +1,90 @@
+{
+	"colors": [ "#76B6E3", "#FAA61A", "#62998F", "#EA7F83" ],
+    "categories": [
+        {
+            "name": "Zingers",
+            "days": [
+                {
+                    "name": "Feb. 26",
+                    "quotes": [
+                        {
+                            "speaker": "Capt. Jean-Luc Picard",
+                            "text": "&ldquo;There is a way out of every box, a solution to every puzzle; it's just a matter of finding it.&rdquo;",
+							"teaseText": "Captain Picard loves boxes and puzzles. Here's how much.",
+                            "img": "img/picard.jpg",
+                            "audio": "audio/chickens.mp3",
+							"timestamp": "Feb. 25, 2015 2:11:53 PM"
+                        },
+						{
+                            "speaker": "Lt. Cmdr. Data",
+                            "text": "&ldquo;Open sesame! You could say I have a magnetic personality. Humor! I love it.&rdquo;",
+							"teaseText": "You wouldn't think Data is funny. But he is.",
+                            "img": "img/data.jpg",
+                            "audio": "",
+							"timestamp": "Feb. 25, 2015 1:11:53 PM"
+                        }
+                    ]
+                },
+				{
+                    "name": "Feb. 27",
+                    "quotes": [
+                        {
+                            "speaker": "Capt. Jean-Luc Picard",
+                            "text": "&ldquo;There is a way out of every box, a solution to every puzzle; it's just a matter of finding it.&rdquo;",
+							"teaseText": "Captain Picard loves boxes and puzzles. Here's how much.",
+                            "img": "img/picard.jpg",
+                            "audio": "",
+							"timestamp": "Feb. 25, 2015 1:11:53 PM"
+                        },
+						{
+                            "speaker": "Lt. Cmdr. Data",
+                            "text": "&ldquo;Open sesame! You could say I have a magnetic personality. Humor! I love it.&rdquo;",
+							"teaseText": "You wouldn't think Data is funny. But he is.",
+                            "img": "img/data.jpg",
+                            "audio": "",
+							"timestamp": "Feb. 25, 2015 1:11:53 PM"
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "name": "Policy",
+			"color": "",
+            "days": [
+                {
+                    "name": "Feb. 26",
+                    "quotes": [
+                        {
+                            "speaker": "Cmdr. William T. Riker",
+                            "text": "&ldquo;The game's not big enough unless it scares you a little.&rdquo;",
+							"teaseText": "Riker is a risk-taker. But how much of one?",
+                            "img": "img/riker.jpg",
+                            "audio": "",
+							"timestamp": "Feb. 25, 2015 1:11:53 PM"
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "name": "Bullshit",
+			"color": "",
+            "days": [
+                {
+                    "name": "Feb. 26",
+                    "quotes": [
+                        {
+                            "speaker": "Cmdr. William T. Riker",
+                            "text": "&ldquo;The game's not big enough unless it scares you a little.&rdquo;",
+							"teaseText": "Riker is a risk-taker. But how much of one?",
+                            "img": "img/riker.jpg",
+                            "audio": "",
+							"timestamp": "Feb. 25, 2015 1:11:53 PM"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
