@@ -3,8 +3,12 @@
 
 <head>
 
+	<!-- Angular.js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
 	
+	<!-- Moment.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 	
@@ -16,10 +20,10 @@
 <body ng-controller="cpacController">
 	<ul class="container">
 		
-		<li ng-repeat="category in data.categories">
+		<li class="category" ng-repeat="category in data.categories">
 			<div class="categoryName">{{category.name}}</div>
 			
-			<ul class="dayContainer">
+			<ul class="dayContainer" style="border-left-color: {{data.colors[$index]}}">
 				<li ng-repeat="day in category.days">
 					<ul class="quoteContainer">
 						<li class="quote" ng-repeat="quote in day.quotes">
@@ -30,9 +34,13 @@
 										<div class="portrait" style="background-image: url({{quote.img}})"></div>
 									</td>
 									<td>
-										
-										<span class="text" ng-bind-html="renderHTML(quote.text)"></span>
-										<span class="teaser" ng-show="false">{{quote.teaseText}}</span>			
+										<div class="speaker">
+											<span>{{quote.speaker}}</span>
+											<span>{{formatTime(quote.timestamp)}}</span>
+											<span class = "new" ng-show="isNew(quote.timestamp)">new</span>
+										</div>
+										<span class="text" ng-bind-html="renderHTML(quote.text)" ng-show="false"></span>
+										<span class="teaser" ng-bind-html="renderHTML(quote.teaseText)"></span>			
 									</td>
 								<tr>
 							</table>
