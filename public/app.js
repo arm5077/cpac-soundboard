@@ -6,7 +6,7 @@ app.controller("cpacController", ["$scope", "$http", "$sce", function($scope, $h
 	$scope.trustURL = function(url){ return $sce.trustAsResourceUrl(url) };
 	
 	$scope.formatTime = function(timestamp){
-		return moment(timestamp).format('MMM. D, h:mm a');
+		return moment(timestamp).format('MMM. D');
 	};
 	
 	$scope.isNew = function(timestamp){
