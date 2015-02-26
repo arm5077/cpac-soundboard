@@ -102,6 +102,12 @@ ul.dayContainer {
 	margin-right:15px;
 }
 
+	.portrait.mobile {
+		height:30px;
+		width:30px;
+		border: 2px solid #ccc;
+		margin-right:5px;
+	}
 
 .speaker {
 	font-weight:400;
@@ -195,7 +201,11 @@ a.social {
 	
 	ul.dayContainer {
 		width: 98%;
-		margin-left: 2%;
+		margin:auto;
+	}
+	
+	.teaser {
+		font-size:16pt;
 	}
 	
 }

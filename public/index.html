@@ -5,6 +5,9 @@
 
 	<!-- Angular.js -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+
+	<!-- Angular Touch -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-touch.js"></script>
 	
 	<!-- jQuery (sorry Angular bros) --> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -33,15 +36,18 @@
 				<li ng-repeat="day in category.days">
 					<ul class="quoteContainer">
 						<li class="quote" ng-repeat="quote in day.quotes" ng-click="playAudio($index + '_' + $parent.$index + '_' + $parent.$parent.$index, quote)">
-							<audio id = "{{ $index + '_' + $parent.$index + '_' + $parent.$parent.$index }}" ng-src = "{{ trustURL(quote.audio) }}"></audio>
+							<audio id = "{{ $index + '_' + $parent.$index + '_' + $parent.$parent.$index }}">
+								<source ng-src = "{{ trustURL(quote.audio) }}" type="audio/mp3" />
+							</audio>
 							<table>
 								<tr>
-									<td class="portraitContainer">
+									<td class="portraitContainer" ng-show="!mobile">
 										<i class="fa fa-volume-up" ng-class="{active: quote.playing == true}"></i>
 										<div class="portrait" style="background-image: url({{quote.img}})"></div>
 									</td>
 									<td>
 										<div class="speaker">
+											<div class="portrait mobile" ng-show="mobile" style="background-image: url({{quote.img}})"></div>
 											<span>{{quote.speaker}}</span>
 											<span class = "time">{{formatTime(quote.timestamp)}}</span>
 											<span class = "new" ng-show="isNew(quote.timestamp)" style="background-color: {{data.colors[$parent.$parent.$index]}}">new</span>
@@ -49,7 +55,7 @@
 										<div class="teaser" ng-bind-html="renderHTML(quote.teaseText)" ng-show="!quote.activated"></div>	
 										<div class="text" ng-bind-html="renderHTML(quote.text)" ng-show="quote.activated"></div>
 										<div class = "socialContainer">
-											<a class="social" id="twitter" ng-show="quote.activated" target="_blank" href="https://twitter.com/intent/tweet?text={{quote.speaker}} at CPAC: {{ prepareForTweet(quote.text) }}&:tw_p=tweetbutton&url=http://www.nationaljournal.com/twenty-sixteen/cpac-conservative-political-action-convention-quotes-soundboard">Share on Twitter</a>
+											<a class="social" id="twitter" ng-show="quote.activated" ng-click="turnOffAudio" target="_blank" href="https://twitter.com/intent/tweet?text={{quote.speaker}} at CPAC: {{ prepareForTweet(quote.text) }}&:tw_p=tweetbutton&url=http://www.nationaljournal.com/twenty-sixteen/cpac-conservative-political-action-convention-quotes-soundboard">Share on Twitter</a>
 										</div>		
 									</td>
 								<tr>
