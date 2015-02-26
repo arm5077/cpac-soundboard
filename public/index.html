@@ -30,7 +30,7 @@
 				<li ng-repeat="day in category.days">
 					<ul class="quoteContainer">
 						<li class="quote" ng-repeat="quote in day.quotes" ng-click="playAudio($index + '_' + $parent.$index + '_' + $parent.$parent.$index, quote)">
-							<audio id = "{{ $index + '_' + $parent.$index + '_' + $parent.$parent.$index }}" src = "{{quote.audio}}"></audio>
+							<audio id = "{{ $index + '_' + $parent.$index + '_' + $parent.$parent.$index }}" ng-src = "{{ trustURL(quote.audio) }}"></audio>
 							<table>
 								<tr>
 									<td class="portraitContainer">

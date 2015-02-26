@@ -3,6 +3,7 @@ app = angular.module("cpacApp", []);
 app.controller("cpacController", ["$scope", "$http", "$sce", function($scope, $http, $sce){
 	
 	$scope.renderHTML = function(text){ return $sce.trustAsHtml(text); };
+	$scope.trustURL = function(url){ return $sce.trustAsResourceUrl(url) };
 	
 	$scope.formatTime = function(timestamp){
 		return moment(timestamp).format('MMM. D, h:mm a');
