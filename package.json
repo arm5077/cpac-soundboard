@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/arm5077/cpac-soundboard",
   "dependencies": {
-    "edit-google-spreadsheet": "^0.2.16"
+    "edit-google-spreadsheet": "^0.2.16",
+    "express": "^4.12.0"
   }
 }
