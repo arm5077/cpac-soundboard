@@ -81,10 +81,3 @@ Spreadsheet.load({
 
 
 
-fs.readFile('template/data.json', function(err, data){
-	if( err ) throw err;
-	
-	var data = new Buffer(data, 'binary');
-	
-	
-});
