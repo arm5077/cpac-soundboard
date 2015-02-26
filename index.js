@@ -78,7 +78,7 @@ function update(){
 				console.log(arguments)
 
 				// Update spreadsheet
-				spreadsheet.add({ 1: { 10: "Updated: " + new Date()} });
+				spreadsheet.add({ 1: { 11: "Updated: " + new Date()} });
 				spreadsheet.send(function(err) {
 					if(err) throw err; 
 					console.log("Spreadsheet timestamp updated");
