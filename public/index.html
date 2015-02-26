@@ -48,7 +48,9 @@
 										</div>
 										<div class="teaser" ng-bind-html="renderHTML(quote.teaseText)" ng-show="!quote.activated"></div>	
 										<div class="text" ng-bind-html="renderHTML(quote.text)" ng-show="quote.activated"></div>
-												
+										<div class = "socialContainer">
+											<a class="social" id="twitter" ng-show="quote.activated" target="_blank" href="https://twitter.com/intent/tweet?text={{quote.speaker}} at CPAC: {{ prepareForTweet(quote.text) }}&:tw_p=tweetbutton&url=http://www.nationaljournal.com/twenty-sixteen/cpac-conservative-political-action-convention-quotes-soundboard">Share on Twitter</a>
+										</div>		
 									</td>
 								<tr>
 							</table>

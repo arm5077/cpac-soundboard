@@ -4,6 +4,9 @@ app.controller("cpacController", ["$scope", "$http", "$sce", function($scope, $h
 	
 	$scope.renderHTML = function(text){ return $sce.trustAsHtml(text); };
 	$scope.trustURL = function(url){ return $sce.trustAsResourceUrl(url) };
+	$scope.prepareForTweet = function(text){
+		return text.replace(/<(?:.|\n)*?>/gm, '').replace(/;/g, ' - ');
+	}
 	
 	$scope.formatTime = function(timestamp){
 		return moment(timestamp).format('MMM. D');

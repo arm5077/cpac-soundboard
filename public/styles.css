@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,400);
 
 html, body {
 	font-family: Roboto, Helvetica, sans-serif;
@@ -7,6 +7,10 @@ html, body {
 body {
 	padding-bottom:100px;
 	
+}
+
+a {
+	color:seagreen;
 }
 
 ul {
@@ -73,7 +77,11 @@ ul.dayContainer {
 	opacity: 0.2;
 }
 
-	.quote:hover .fa-volume-up, .fa-volume-up.active {
+	.quote:hover .fa-volume-up {
+		opacity: .6;
+	}
+	
+	.fa-volume-up.active, .quote:hover .fa-volume-up.active {
 		opacity: .8;
 	}
 
@@ -138,6 +146,42 @@ ul.dayContainer {
 	font-size:15pt;
 	
 }
+
+.socialContainer {
+	margin-top:10px;
+}
+
+a.social {
+	display: inline-block;
+	padding: 5px 10px;
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 5px;
+	margin-left: 5px;
+	-webkit-user-select: none; 
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select:none;
+	cursor: pointer;
+	opacity:.5;
+	transition:all .25s;
+	font-size:10pt;
+	position:relative;
+	top:-3px;
+}
+
+	a.social#facebook {
+		background-color: #3b5998;
+	}
+	
+	a.social#twitter{
+		background-color: #4099FF;
+	}
+
+	a.social:hover {
+		opacity:1;
+	}
 
 @media screen and (max-width: 800px) {
 	
