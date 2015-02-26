@@ -33,7 +33,7 @@ function update(){
 
 			var export_array = {};
 			export_array.categories = [];
-
+			export_array.colors = [ "#76B6E3", "#FAA61A", "#62998F", "#EA7F83" ];
 				for( var row in rows ){
 					if( rows.hasOwnProperty(row) ){
 						// Skip the first row

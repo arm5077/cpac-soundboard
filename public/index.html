@@ -12,6 +12,9 @@
 	<!-- Moment.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 
+	<!-- Pym.js -->
+	<script src="pym.js"></script>
+
 	<!-- FontAwesome -->
 	<link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 	
@@ -61,5 +64,11 @@
 
 <!-- Site-specific scripts -->
 <script src="app.js"></script>
+
+<script type="text/javascript">
+	var pymChild = new pym.Child();
+	setInterval(function(){ pymChild.sendHeight(); console.log("Sending pym ping!") }, 250);
+</script>
+
 
 </html>
